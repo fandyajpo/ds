@@ -16,7 +16,16 @@ client.once(Events.ClientReady, (c) => {
 
 client.on("messageCreate", (message) => {
   if (message.content.toLocaleLowerCase() === "pagi") {
-    message.reply("pagi juga kesayangan mom");
+    return message.reply("pagi juga kesayangan mom");
+  }
+  if (message.content.toLocaleLowerCase() === "sore") {
+    return message.reply("sore my love");
+  }
+  if (message.content.toLocaleLowerCase() === "malam") {
+    return message.reply("malam juge cinta");
+  }
+  if (message.content.toLocaleLowerCase() === "siang") {
+    return message.reply("tidur berdua yuk");
   }
 });
 

@@ -37,17 +37,20 @@ client.on("messageCreate", (message) => {
 });
 
 client.on("guildMemberAdd", async (member) => {
-  const channelId = "802185552505208832";
-  if (member.guild.id === "772427404769493032") {
+  const channelId = "1109776159987728476";
+  if (member.guild.id === "1109776158930784332") {
     const embed = new EmbedBuilder()
       .setTitle("Welcome")
       .setDescription("Welcome to DS SERVER and enjoy your stay!")
       .setThumbnail(member.user.avatarURL({ forceStatic: true }))
+      .setImage(
+        "https://cdn.discordapp.com/attachments/1124350568182317056/1135915965654257714/959CCDA7-1950-4B4C-8B92-076E2B0D3DFE_1.png"
+      )
       .setTimestamp();
 
     try {
       const channel = await member.guild.channels.fetch(channelId);
-      await channel.send({ embeds: [embed] });
+      await channel.send({ content: `<@${member.user.id}>`, embeds: [embed] });
     } catch (error) {
       console.error("Error fetching channel:", error);
     }

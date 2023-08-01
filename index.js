@@ -37,8 +37,8 @@ client.on("messageCreate", (message) => {
 });
 
 client.on("guildMemberAdd", async (member) => {
-  const channelId = "1109776159987728476";
-  if (member.guild.id === "1109776158930784332") {
+  const channelId = "802185552505208832";
+  if (member.guild.id === "772427404769493032") {
     const embed = new EmbedBuilder()
       .setTitle("Welcome")
       .setDescription("Welcome to DS SERVER and enjoy your stay!")
